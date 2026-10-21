@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>웨이퍼 시장·경쟁사 조사</title>
+<style>
+:root{--bg:#f7f7f5;--card:#fff;--ink:#1d1d1f;--muted:#5f6368;--line:#e3e3e0;--accent:#c8102e;--ok:#1e7f4f;--mid:#a06a00;--low:#b3261e;--tag:#eef1f5}
+@media (prefers-color-scheme:dark){:root{--bg:#141416;--card:#1d1d20;--ink:#ececec;--muted:#a0a0a6;--line:#333338;--accent:#ff5a6e;--ok:#5cc28e;--mid:#e3b04b;--low:#ff7b72;--tag:#2a2d33}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif}
+main{max-width:860px;margin:0 auto;padding:24px 16px 64px}
+header p{margin:4px 0;color:var(--muted);font-size:14px}
+h1{font-size:26px;margin:0 0 8px}
+h2{font-size:20px;margin:36px 0 12px;padding-top:12px;border-top:1px solid var(--line)}
+h3{font-size:17px;margin:20px 0 6px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:12px 0}
+.summary{border-left:4px solid var(--accent)}
+.label{display:inline-block;font-size:12px;font-weight:600;padding:1px 8px;border-radius:999px;background:var(--tag);margin-right:6px}
+.fact .label{color:var(--ok)} .interp .label{color:var(--mid)}
+.conf-high{color:var(--ok);font-weight:600}.conf-medium{color:var(--mid);font-weight:600}.conf-low{color:var(--low);font-weight:600}
+sup a{text-decoration:none;color:var(--accent);font-size:12px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600}
+.scroll{overflow-x:auto}
+.verify{color:var(--low);font-weight:600}
+a{color:var(--accent);word-break:break-all}
+ol li,ul li{margin:6px 0}
+footer{margin-top:40px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>실리콘 웨이퍼 시장·경쟁사 현황</h1>
+<p>작성: 알렌 (Research) · 작성일 2026-10-21 · 기준: 2026년 10월 21일까지 공표된 공개 자료</p>
+<p>절차: research-sop · 다음 단계: Strategy Agent 인계 (문서 하단 인계 블록)</p>
+</header>
+
+<section class="card summary">
+<strong>결론: 웨이퍼 시장은 300mm·AI 수요가 물량을 끌어올리고 있지만, 가격과 수익성은 아직 회복 초입이며, SK실트론은 두산으로의 대주주 변경이 진행 중인 시점이라 고객 신뢰와 구성원 안정을 함께 챙겨야 하는 국면입니다.</strong>
+<ul>
+<li>2025년 세계 웨이퍼 출하 면적은 12,973 MSI로 5.8% 늘었지만 매출은 114억 달러로 1.2% 줄었습니다 (SEMI, 2026-02-10 공표)<sup><a href="#S2">S2</a></sup>.</li>
+<li>2026년 2분기 출하는 3,573 MSI로 전년 대비 7.4%, 전 분기 대비 9.1% 늘었습니다 (SEMI, 2026-07-29 공표)<sup><a href="#S1">S1</a></sup>.</li>
+<li>300mm는 강하고 200mm는 약한 "두 갈래" 흐름이 경쟁사 공시 전반에서 공통으로 확인됩니다<sup><a href="#S4">S4</a> <a href="#S6">S6</a> <a href="#S8">S8</a></sup>.</li>
+<li>SK㈜는 SK실트론 지분 70.61%를 두산에 약 2.3조원에 매각하기로 2026-07-31 이사회 결의했고, 거래 종결 예정일은 2027-01-31로 보도됐습니다<sup><a href="#S11">S11</a> <a href="#S12">S12</a></sup>.</li>
+<li>미국 SiC 자회사 공장 정리 보도가 있으나 출처가 하나뿐이라 <span class="verify">확인 필요</span>입니다<sup><a href="#S14">S14</a></sup>.</li>
+</ul>
+</section>
+
+<h2>1. 조사 질문과 범위</h2>
+<div class="card">
+<p><strong>질문:</strong> 2025~2026년 실리콘 웨이퍼 시장은 어떻게 움직이고 있고, 주요 경쟁사와 SK실트론은 어떤 위치에 있는가?</p>
+<p><strong>기준 시점:</strong> 2026-10-21까지 공표된 자료. SEMI의 2026년 3분기 출하 통계는 아직 확인하지 못했습니다.</p>
+<p><strong>제외:</strong> 고객사별 계약 조건과 공급 단가, 고객사 비공개 정보, 사내 공정·기술 정보 (research-sop 금지 항목).</p>
+<p><strong>출처 등급:</strong> 1차 = SEMI·각 사 공시/보도자료. 2차 = 언론 기사, 로펌 분석, AI 요약 서비스(Quartr, FilingReader). 2차 출처 숫자는 원 공시로 재확인이 필요합니다.</p>
+</div>
+
+<h2>2. 항목별 조사 결과</h2>
+
+<h3>2-1. 시장 규모와 성장률</h3>
+<div class="card fact"><span class="label">사실</span>
+<div class="scroll"><table>
+<tr><th>지표</th><th>값</th><th>기준 기간</th><th>출처</th></tr>
+<tr><td>연간 출하 면적</td><td>12,973 MSI (+5.8% YoY)</td><td>2025년</td><td><a href="#S2">S2</a></td></tr>
+<tr><td>연간 매출</td><td>114억 달러 (−1.2% YoY)</td><td>2025년</td><td><a href="#S2">S2</a></td></tr>
+<tr><td>분기 출하 면적</td><td>3,275 MSI (+13% YoY)</td><td>2026년 1분기</td><td><a href="#S1">S1</a>, <a href="#S9">S9</a></td></tr>
+<tr><td>분기 출하 면적</td><td>3,573 MSI (+7.4% YoY, +9.1% QoQ)</td><td>2026년 2분기</td><td><a href="#S1">S1</a></td></tr>
+<tr><td>상반기 출하 면적 합계</td><td>6,848 MSI (알렌 계산: 3,275 + 3,573)</td><td>2026년 상반기</td><td><a href="#S1">S1</a></td></tr>
+<tr><td>2028년 출하 전망</td><td>15,485 MSI (사상 최대 전망)</td><td>2025-10 시점 전망</td><td><a href="#S3">S3</a></td></tr>
+</table></div>
+<p>SEMI는 2025-10 전망에서 2025년 출하를 12,824 MSI로 봤으나, 2026-02 실적은 12,973 MSI로 전망을 웃돌았습니다<sup><a href="#S2">S2</a> <a href="#S3">S3</a></sup>. 2026년 연간 공식 전망치는 <span class="verify">확인 필요</span>입니다.</p>
+</div>
+<div class="card interp"><span class="label">해석</span>
+<p>2025년에 물량은 늘고 매출은 줄었다는 것은 평균 판매 단가가 낮아졌거나 저가 제품 비중이 커졌다는 뜻으로 읽힙니다. 다만 SEMI는 매출 감소를 "전통 응용 분야의 수요와 가격 부진" 탓으로 설명했고, 단가 수치는 공개하지 않았습니다<sup><a href="#S2">S2</a></sup>.</p>
+</div>
+
+<h3>2-2. 고객 세그먼트</h3>
+<div class="card fact"><span class="label">사실</span>
+<ul>
+<li><strong>메모리·AI:</strong> SEMI는 300mm 수요가 AI 로직과 HBM(고대역폭 메모리) 중심으로 강하다고 밝혔습니다<sup><a href="#S2">S2</a></sup>. 2026년 2분기에는 AI 수요가 첨단 로직·메모리를 넘어 전력반도체와 광(포토닉스)으로 넓어진다고 했습니다<sup><a href="#S1">S1</a></sup>.</li>
+<li><strong>PC·스마트폰:</strong> 메모리 가격 상승이 PC·스마트폰 수요를 누르고 있다는 언급이 SEMI와 Siltronic 양쪽에 있습니다<sup><a href="#S1">S1</a> <a href="#S4">S4</a></sup>.</li>
+<li><strong>전력반도체·차량용:</strong> Siltronic은 전력반도체 고객의 재고 축소로 200mm 물량 감소를 예상했고(2026-02)<sup><a href="#S4">S4</a></sup>, SEMI는 2026-07에 산업·차량용 수요가 회복 중이라고 했습니다<sup><a href="#S1">S1</a></sup>.</li>
+<li><strong>파운드리:</strong> 세그먼트별 출하 비중 공식 수치는 찾지 못했습니다. <span class="verify">확인 필요</span></li>
+</ul>
+</div>
+
+<h3>2-3. 경쟁사</h3>
+<div class="card fact"><span class="label">사실</span>
+<div class="scroll"><table>
+<tr><th>회사</th><th>최근 실적·발언</th><th>기준 기간</th><th>출처</th></tr>
+<tr><td>Shin-Etsu (신에쓰)</td><td>그룹 매출 6,624억 엔(+5.4%), 영업이익 1,738억 엔(+4.2%). 전자재료는 AI 반도체 수요로 성장. 웨이퍼 단독 수치는 요약에 없음.</td><td>2026년 4~6월 (FY2027 1분기)</td><td><a href="#S7">S7</a> (2차)</td></tr>
+<tr><td>SUMCO (섬코)</td><td>2분기 매출 1,136억 엔, 영업손실 11억 엔. 300mm 출하 사상 최대, 200mm 점진 회복. 3분기 매출 1,180억 엔·영업이익 손익분기 전망. 웨이퍼 가격이 크게 오르지 않으면 신규 공장 재개 계획 없음.</td><td>2026년 2분기</td><td><a href="#S6">S6</a>, <a href="#S5">S5</a> (2차)</td></tr>
+<tr><td>GlobalWafers (환구정원)</td><td>2분기 순이익 37.8억 대만달러, 매출총이익률 20.6%(전년 25.8%). 이탈리아 노바라 공장 화재로 2026년 매출은 전년과 비슷하거나 소폭 증가 전망. 고객과 가격 인상 협의 중, 고객이 더 긴 장기공급계약을 요청.</td><td>2026년 2분기 (2026-08-04 발언)</td><td><a href="#S8">S8</a> (2차)</td></tr>
+<tr><td>Siltronic (실트로닉)</td><td>2025년 매출 13.47억 유로(잠정), EBITDA 마진 23.5%. 2026년 매출 한 자릿수 중반 감소, EBITDA 마진 20~24% 가이던스. 장기계약 밖에서 가격 압력 지속.</td><td>2025년 / 2026년 가이던스 (2026-02-12)</td><td><a href="#S4">S4</a> (1차)</td></tr>
+<tr><td>중국 Eswin (이스윈)</td><td>2026년까지 12인치 월 120만 장 목표, 세계 점유율 10% 이상 기대(회사 주장). 삼성전자·SK하이닉스 중국 공장이 평가 중이나 업계는 양산이 아닌 시험 단계로 봄.</td><td>2026-05 보도</td><td><a href="#S9">S9</a> (2차)</td></tr>
+<tr><td>중국 NSIG (상하이실리콘)</td><td>300mm 출하 증가로 2025년 매출 증가, 가격 압력과 고정비로 마진은 압박.</td><td>2025년</td><td><a href="#S10">S10</a> (2차)</td></tr>
+</table></div>
+<p>세계 점유율: SK실트론이 12인치 세계 3위라는 보도가 있고<sup><a href="#S12">S12</a> <a href="#S13">S13</a></sup>, 상위 5개사가 90% 이상이라는 보도도 있으나<sup><a href="#S12">S12</a></sup> 두 기사 모두 근거 통계를 밝히지 않았습니다. 회사별 점유율 수치는 <span class="verify">확인 필요</span>입니다.</p>
+</div>
+<div class="card interp"><span class="label">해석</span>
+<p>2026년 상반기 경쟁사들은 물량은 회복했지만 수익성은 낮은 상태입니다(SUMCO 영업손실, GlobalWafers 마진 하락). 하반기부터 GlobalWafers가 가격 인상과 장기계약 연장을 공개적으로 말하기 시작해, 300mm 수급이 빡빡해지는 신호로 볼 수 있습니다. 다만 한 회사의 발언이라 신뢰도는 중간입니다.</p>
+<p>중국 업체는 자국 시장 중심으로 물량을 키우고 있으나, 첨단 양산 품질 격차는 아직 크다는 평가가 우세합니다<sup><a href="#S9">S9</a></sup>.</p>
+</div>
+
+<h3>2-4. 제품 구조와 SK실트론 현황</h3>
+<div class="card fact"><span class="label">사실</span>
+<ul>
+<li><strong>대주주 변경:</strong> SK㈜는 보유 SK실트론 보통주 전량(70.61%, 47,322,350주)을 ㈜두산에 약 2.3조원에 매각하기로 2026-07-31 이사회에서 결의했습니다. 거래 종결 예정일은 2027-01-31이며 최종 가격은 조정될 수 있습니다<sup><a href="#S11">S11</a> <a href="#S12">S12</a></sup>. 앞서 6월에는 SK그룹이 매각 일정을 미루고 재검토한다는 보도가 있었습니다<sup><a href="#S13">S13</a></sup>.</li>
+<li><strong>두산의 계획:</strong> 비상장 유지, 2031년 매출 약 3조원 목표, 메모리 웨이퍼 세계 2위 목표 (두산 발표 목표이며 실적이 아님)<sup><a href="#S12">S12</a></sup>.</li>
+<li><strong>실적:</strong> "지난해" 매출 약 2조원, 영업이익 4,000억원 이상으로 보도됐습니다. 기사에 연도가 명시되지 않아 2025년으로 추정되나 <span class="verify">확인 필요</span>입니다<sup><a href="#S11">S11</a> <a href="#S12">S12</a></sup>.</li>
+<li><strong>제품군 비중:</strong> Polished/Epi/SOI 비중과 장기공급계약 비중은 공개 자료에서 찾지 못했습니다. <span class="verify">확인 필요</span></li>
+<li><strong>SiC (미국 자회사):</strong> 미시간 베이 카운티의 SK실트론 CSS 공장을 약 60일에 걸쳐 정리하고 미국 자회사를 정리한다는 지역 매체 보도가 있습니다(약 140명 영향, 사유: EV 시장 변화). 2024년 미 에너지부의 최대 5.44억 달러 조건부 대출은 상환했다고 보도됐습니다<sup><a href="#S14">S14</a></sup>. 단일 2차 출처라 <span class="verify">확인 필요</span>입니다.</li>
+</ul>
+</div>
+<div class="card interp"><span class="label">해석</span>
+<p>SiC 정리 보도가 사실이면, CLAUDE.md의 "미국 자회사를 통해 SiC 웨이퍼 사업을 육성" 문구와 현실이 달라집니다. 알렌은 CLAUDE.md를 고치지 않았고, 회사 공식 확인 후 경영진 판단이 필요합니다.</p>
+<p>SiC 업계 전반에서 중국 업체 진입으로 기판 가격 하락이 빨라졌다는 분석이 있으나<sup><a href="#S16">S16</a></sup>, 이 자료는 2024-09 기준이라 최신 가격 흐름은 <span class="verify">확인 필요</span>입니다.</p>
+</div>
+
+<h3>2-5. 규제·정책 동향</h3>
+<div class="card fact"><span class="label">사실</span>
+<ul>
+<li><strong>미국 반도체 관세:</strong> 2026-01-14 대통령 포고문(근거: 무역확장법 제232조, 19 U.S.C. §1862)으로 일부 첨단 반도체에 25% 관세가 2026-01-15부터 부과됐습니다. 대상은 HTSUS 8471.50·8471.80·8473.30 중 특정 성능 기준을 충족하는 제품으로 매우 좁고, 분석 자료상 실리콘 웨이퍼는 명시 대상이 아닙니다. 더 넓은 반도체 관세는 별도 포고문으로 나올 수 있습니다<sup><a href="#S15">S15</a></sup>.</li>
+<li><strong>중국 자급 정책:</strong> 중국은 2026년까지 첨단 웨이퍼 70% 이상 국산 조달을 목표로 한다는 보도가 있습니다<sup><a href="#S9">S9</a></sup>. 근거 정책 문서는 <span class="verify">확인 필요</span>.</li>
+<li><strong>한국 정책 (보조금·세제), 환경 규제:</strong> 이번 조사에서 확인하지 못했습니다. <span class="verify">확인 필요</span></li>
+</ul>
+</div>
+
+<h3>2-6. 최근 지표 (가격·가동률)</h3>
+<div class="card fact"><span class="label">사실</span>
+<ul>
+<li>Siltronic(2026-02): 장기계약 밖에서 가격 압력 지속<sup><a href="#S4">S4</a></sup>.</li>
+<li>GlobalWafers(2026-08): 12·8·6인치 가동률 상승, 2026년 하반기부터 2027년 1분기까지 현물 가격 상승 예상<sup><a href="#S8">S8</a></sup>.</li>
+<li>SUMCO(2026 2분기): 4분기 300mm 풀가동 예상, 일부 고객은 공급 우려로 재고를 늘리는 중<sup><a href="#S6">S6</a></sup>.</li>
+<li>웨이퍼 가격 지수나 업계 평균 단가 공식 통계는 찾지 못했습니다. <span class="verify">확인 필요</span></li>
+</ul>
+</div>
+
+<h2>3. Key Findings</h2>
+<div class="card"><ol>
+<li>물량은 늘고 매출은 줄었다: 2025년 출하 +5.8%, 매출 −1.2%<sup><a href="#S2">S2</a></sup>. <span class="conf-high">신뢰도 높음</span></li>
+<li>2026년 상반기 성장 지속: 1분기 +13%, 2분기 +7.4% (전년 대비)<sup><a href="#S1">S1</a></sup>. <span class="conf-high">신뢰도 높음</span></li>
+<li>300mm(AI·HBM) 강세, 200mm 약세의 두 갈래 시장<sup><a href="#S2">S2</a> <a href="#S4">S4</a> <a href="#S6">S6</a></sup>. <span class="conf-high">신뢰도 높음</span></li>
+<li>2026년 하반기 300mm 가격·장기계약 조건이 공급사에 유리하게 바뀌는 신호<sup><a href="#S8">S8</a> <a href="#S6">S6</a></sup>. <span class="conf-medium">신뢰도 중간</span></li>
+<li>경쟁사 수익성은 아직 낮음 (SUMCO 영업손실, GlobalWafers 마진 하락)<sup><a href="#S6">S6</a> <a href="#S8">S8</a></sup>. <span class="conf-medium">신뢰도 중간 (2차 요약)</span></li>
+<li>중국 업체는 물량 확대 중이나 첨단 양산 품질 격차는 아직 큼<sup><a href="#S9">S9</a> <a href="#S10">S10</a></sup>. <span class="conf-medium">신뢰도 중간</span></li>
+<li>SK실트론 대주주가 SK에서 두산으로 바뀌는 중 (종결 예정 2027-01-31)<sup><a href="#S11">S11</a> <a href="#S12">S12</a></sup>. <span class="conf-high">신뢰도 높음</span></li>
+<li>미국 SiC 자회사 공장 정리 보도<sup><a href="#S14">S14</a></sup>. <span class="conf-low">신뢰도 낮음 (단일 2차 출처)</span></li>
+<li>미국 232조 반도체 관세는 현재 웨이퍼를 직접 겨냥하지 않음<sup><a href="#S15">S15</a></sup>. <span class="conf-medium">신뢰도 중간</span></li>
+</ol></div>
+
+<h2>4. Implications (SK실트론에 주는 의미)</h2>
+<div class="card"><ul>
+<li><strong>고객 신뢰 우선:</strong> 대주주 변경 기간에 고객사가 가장 먼저 묻는 것은 품질과 공급 연속성입니다. 수급이 빡빡해지는 시기라 단기 가격 인상보다 품질·납기 약속을 지키는 것이 장기 신뢰에 유리하다는 해석이 가능합니다 (해석).</li>
+<li><strong>구성원 안정:</strong> 매각과 SiC 정리 보도가 겹쳐 구성원 불안이 커질 수 있습니다. 사실 확인과 투명한 사내 소통이 필요합니다 (해석).</li>
+<li><strong>미래 목표:</strong> 성장 수요는 300mm 메모리·HBM과 AI 관련 영역에 몰려 있어, 두산이 밝힌 메모리 웨이퍼 세계 2위 목표와 방향이 맞습니다 (해석).</li>
+</ul></div>
+
+<h2>5. Risks</h2>
+<div class="card"><ul>
+<li><strong>경쟁:</strong> 중국 업체의 자국 내 대체, 경쟁사의 300mm 증설 재개.</li>
+<li><strong>비용:</strong> 에너지·물류·원자재·인건비 상승 (GlobalWafers 언급)<sup><a href="#S8">S8</a></sup>. 200mm 수요 부진 시 고정비 부담.</li>
+<li><strong>규제:</strong> 미국 반도체 관세 범위 확대 가능성<sup><a href="#S15">S15</a></sup>, 중국 자급 정책.</li>
+<li><strong>평판:</strong> 대주주 변경과 SiC 정리 관련 보도가 고객·구성원·지역사회에 주는 인상.</li>
+</ul></div>
+
+<h2>6. Recommended Next Step</h2>
+<div class="card"><p>Strategy Agent는 이 보고서를 바탕으로 "대주주 변경 기간 고객 신뢰·구성원 안정 방안"과 "300mm 메모리·HBM 수요 대응 방향"을 우선 검토하고, 그 전에 아래 확인 필요 항목 중 1~3번을 회사 공식 자료로 먼저 확인할 것을 권합니다.</p></div>
+
+<h2>7. 확인 필요 목록</h2>
+<div class="card"><ol>
+<li>미국 SiC 자회사(SK실트론 CSS) 공장 정리 여부와 범위: 회사 공시·보도자료로 확인.</li>
+<li>SK실트론 2025년 매출·영업이익 정확한 수치: 감사보고서(DART)로 확인.</li>
+<li>두산 거래 종결 조건과 일정 변동 여부: SK㈜·두산 공시로 확인.</li>
+<li>회사별 세계 점유율: 시장조사기관 원 자료 확인.</li>
+<li>SUMCO·Shin-Etsu·GlobalWafers 숫자: 2차 요약이므로 각 사 IR 원문으로 재확인.</li>
+<li>SEMI 2026년 3분기 출하 통계와 2026년 연간 전망.</li>
+<li>한국 반도체 지원 정책·환경 규제 중 웨이퍼 관련 조항.</li>
+<li>최신 SiC 기판 가격 흐름 (현 자료는 2024-09 기준).</li>
+</ol></div>
+
+<h2>8. 출처</h2>
+<div class="card scroll"><table>
+<tr><th>번호</th><th>제목 / 발행처</th><th>공표일</th><th>기준 기간</th><th>등급</th></tr>
+<tr id="S1"><td>S1</td><td><a href="https://www.semi.org/en/semi-press-release/semi-reports-worldwide-silicon-wafer-shipments-increase-7.4-percent-year-on-year-in-q2-2026">Worldwide Silicon Wafer Shipments Increase 7.4% YoY in Q2 2026</a> / SEMI</td><td>2026-07-29</td><td>2026년 2분기</td><td>1차</td></tr>
+<tr id="S2"><td>S2</td><td><a href="https://www.semi.org/en/semi-press-release/semi-reports-2025-annual-worldwide-silicon-wafer-shipments-and-revenue-results">2025 Annual Worldwide Silicon Wafer Shipments and Revenue Results</a> / SEMI</td><td>2026-02-10</td><td>2025년</td><td>1차</td></tr>
+<tr id="S3"><td>S3</td><td><a href="https://www.semi.org/en/semi-press-release/semi-reports-global-silicon-wafer-shipments-to-rebound-5.4-percent-in-2025-with-new-record-expected-by-2028">Global Silicon Wafer Shipments to Rebound 5.4% in 2025</a> / SEMI</td><td>2025-10-28</td><td>2025~2028 전망</td><td>1차</td></tr>
+<tr id="S4"><td>S4</td><td><a href="https://www.siltronic.com/fileadmin/press/information/2026/20260212_Press_Release_Siltronic_releases_its_guidance_for_financial_year_2026.pdf">Siltronic releases its guidance for FY2026</a> / Siltronic</td><td>2026-02-12</td><td>2025년 잠정, 2026년 가이던스</td><td>1차</td></tr>
+<tr id="S5"><td>S5</td><td><a href="https://filingreader.com/news-wire/tokyo/2026-05-12/sumco-sets-dividend-despite-swing-to-quarterly-loss">SUMCO sets dividend despite swing to quarterly loss</a> / FilingReader (AI 요약)</td><td>2026-05-12</td><td>2026년 1분기</td><td>2차</td></tr>
+<tr id="S6"><td>S6</td><td><a href="https://quartr.com/events/sumco-corporation-3436-q2-2026_F9MgaIQV">SUMCO Q2 2026 earnings summary</a> / Quartr (AI 요약)</td><td>2026-09-11</td><td>2026년 2분기</td><td>2차</td></tr>
+<tr id="S7"><td>S7</td><td><a href="https://quartr.com/events/shin-etsu-chemical-co-ltd-4063-q1-2027_ojdPgtrZ">Shin-Etsu Chemical Q1 2027 earnings summary</a> / Quartr (AI 요약)</td><td>2026-07-24</td><td>2026년 4~6월</td><td>2차</td></tr>
+<tr id="S8"><td>S8</td><td><a href="https://www.taipeitimes.com/News/biz/archives/2026/08/06/2003862000">GlobalWafers 2분기 실적 기사</a> / Taipei Times</td><td>2026-08-06</td><td>2026년 2분기</td><td>2차</td></tr>
+<tr id="S9"><td>S9</td><td><a href="https://www.koreaherald.com/article/10736248">Samsung, SK hynix evaluating Chinese wafers</a> / Korea Herald</td><td>2026-05-12</td><td>2026년 5월 시점</td><td>2차</td></tr>
+<tr id="S10"><td>S10</td><td><a href="https://apps.digitimes.com/news/a20260417VL209/nsig-300mm-revenue-wafer-growth.html">NSIG 300mm revenue growth</a> / DIGITIMES Asia (유료, 요약만 확인)</td><td>2026-04-17</td><td>2025년</td><td>2차</td></tr>
+<tr id="S11"><td>S11</td><td><a href="https://mobile.newsis.com/view/NISX20260731_0003732225">SK, SK실트론 보통주 전량 두산에 매각</a> / 뉴시스</td><td>2026-07-31</td><td>2026-07-31 이사회 결의</td><td>2차</td></tr>
+<tr id="S12"><td>S12</td><td><a href="https://view.asiae.co.kr/article/2026073118535475957">메모리 웨이퍼 '글로벌 톱2' 목표</a> / 아시아경제</td><td>2026-07-31</td><td>2026-07-31 발표</td><td>2차</td></tr>
+<tr id="S13"><td>S13</td><td><a href="https://www.mt.co.kr/industry/2026/06/04/2026060322361518031">SK실트론 매각 멈춘 SK그룹</a> / 머니투데이</td><td>2026-06-04</td><td>2026년 6월 시점</td><td>2차</td></tr>
+<tr id="S14"><td>S14</td><td><a href="https://hoodline.com/2026/07/ev-bet-bust-sk-siltron-pulls-plug-on-bay-county-plant-140-jobs-on-the-line/">SK Siltron pulls plug on Bay County plant</a> / Hoodline (지역 매체 인용)</td><td>2026-07-18</td><td>2026년 7월</td><td>2차</td></tr>
+<tr id="S15"><td>S15</td><td><a href="https://www.whitecase.com/insight-alert/president-trump-orders-narrowly-targeted-25-section-232-tariff-certain-advanced">Narrowly targeted 25% Section 232 tariff</a> / White &amp; Case</td><td>2026-01-21</td><td>2026-01-14 포고문</td><td>2차</td></tr>
+<tr id="S16"><td>S16</td><td><a href="https://compoundsemiconductor.net/article/120181/_Battle_for_8-inch_SiC_heats_up">Battle for 8-inch SiC heats up</a> / Compound Semiconductor (TrendForce 인용)</td><td>2024-09-24</td><td>2024년</td><td>2차</td></tr>
+</table></div>
+
+<footer>이 보고서는 공개 자료만 사용했습니다. 고객사 계약 조건·단가와 사내 기밀은 다루지 않았습니다. 2차 출처 숫자는 원문 확인 전까지 단정하지 마십시오.</footer>
+
+<script type="application/json" id="strategy-handoff">
+{
+  "report_id": "2026-10-21-wafer-market-competitors",
+  "author": "allen",
+  "as_of": "2026-10-21",
+  "question": "2025~2026년 실리콘 웨이퍼 시장은 어떻게 움직이고 있고, 주요 경쟁사와 SK실트론은 어떤 위치에 있는가?",
+  "key_findings": [
+    {"id": "F1", "statement": "2025년 세계 웨이퍼 출하 12,973 MSI(+5.8%), 매출 114억 달러(-1.2%)", "type": "fact", "confidence": "high", "sources": ["S2"]},
+    {"id": "F2", "statement": "2026년 1분기 출하 3,275 MSI(+13% YoY), 2분기 3,573 MSI(+7.4% YoY, +9.1% QoQ)", "type": "fact", "confidence": "high", "sources": ["S1", "S9"]},
+    {"id": "F3", "statement": "300mm(AI·HBM) 강세, 200mm 약세의 두 갈래 시장", "type": "fact", "confidence": "high", "sources": ["S2", "S4", "S6"]},
+    {"id": "F4", "statement": "2026년 하반기 300mm 가격·장기계약 조건이 공급사에 유리해지는 신호", "type": "interpretation", "confidence": "medium", "sources": ["S8", "S6"]},
+    {"id": "F5", "statement": "경쟁사 수익성은 아직 낮음(SUMCO 2분기 영업손실 11억 엔, GlobalWafers 매출총이익률 20.6%)", "type": "fact", "confidence": "medium", "sources": ["S6", "S8"]},
+    {"id": "F6", "statement": "중국 업체는 물량 확대 중이나 첨단 양산 품질 격차는 아직 큼", "type": "interpretation", "confidence": "medium", "sources": ["S9", "S10"]},
+    {"id": "F7", "statement": "SK㈜가 SK실트론 지분 70.61%를 두산에 약 2.3조원에 매각 결의, 종결 예정 2027-01-31", "type": "fact", "confidence": "high", "sources": ["S11", "S12"]},
+    {"id": "F8", "statement": "미국 SiC 자회사 공장 정리 보도 (단일 2차 출처)", "type": "fact", "confidence": "low", "sources": ["S14"]},
+    {"id": "F9", "statement": "미국 232조 반도체 관세(2026-01-15 시행)는 현재 웨이퍼를 명시적으로 겨냥하지 않음", "type": "fact", "confidence": "medium", "sources": ["S15"]}
+  ],
+  "implications": [
+    "대주주 변경 기간 고객사의 품질·공급 연속성 신뢰 유지가 최우선",
+    "매각과 SiC 정리 보도로 인한 구성원 불안 관리 필요",
+    "성장 수요는 300mm 메모리·HBM에 집중되어 두산의 메모리 웨이퍼 세계 2위 목표와 방향 일치"
+  ],
+  "risks": {
+    "competition": ["중국 업체의 자국 내 대체", "경쟁사의 300mm 증설 재개"],
+    "cost": ["에너지·물류·원자재·인건비 상승", "200mm 수요 부진 시 고정비 부담"],
+    "regulation": ["미국 반도체 관세 범위 확대 가능성", "중국 자급 정책"],
+    "reputation": ["대주주 변경과 SiC 정리 관련 보도가 고객·구성원·지역사회에 주는 인상"]
+  },
+  "open_questions": [
+    "대주주 변경 기간 고객 신뢰를 지키기 위한 소통·품질 약속은 무엇인가?",
+    "300mm 메모리·HBM 수요 증가에 어떤 속도로 대응할 것인가?",
+    "SiC 사업 방향이 바뀌었다면 CLAUDE.md의 회사 소개를 어떻게 고칠 것인가?"
+  ],
+  "needs_verification": [
+    "미국 SiC 자회사(SK실트론 CSS) 공장 정리 여부와 범위",
+    "SK실트론 2025년 매출·영업이익 정확한 수치 (DART 감사보고서)",
+    "두산 거래 종결 조건과 일정 변동 여부",
+    "회사별 세계 점유율",
+    "SUMCO·Shin-Etsu·GlobalWafers 2차 요약 숫자의 원문 확인",
+    "SEMI 2026년 3분기 출하 통계와 2026년 연간 전망",
+    "한국 반도체 지원 정책·환경 규제 중 웨이퍼 관련 조항",
+    "최신 SiC 기판 가격 흐름"
+  ],
+  "recommended_next_step": "확인 필요 1~3번을 회사 공식 자료로 먼저 확인한 뒤, Strategy Agent가 대주주 변경 기간 고객 신뢰·구성원 안정 방안과 300mm 메모리·HBM 수요 대응 방향을 검토한다.",
+  "sources": [
+    {"id": "S1", "title": "Worldwide Silicon Wafer Shipments Increase 7.4% YoY in Q2 2026", "publisher": "SEMI", "published": "2026-07-29", "period": "2026 Q2", "tier": "primary", "url": "https://www.semi.org/en/semi-press-release/semi-reports-worldwide-silicon-wafer-shipments-increase-7.4-percent-year-on-year-in-q2-2026"},
+    {"id": "S2", "title": "2025 Annual Worldwide Silicon Wafer Shipments and Revenue Results", "publisher": "SEMI", "published": "2026-02-10", "period": "2025", "tier": "primary", "url": "https://www.semi.org/en/semi-press-release/semi-reports-2025-annual-worldwide-silicon-wafer-shipments-and-revenue-results"},
+    {"id": "S3", "title": "Global Silicon Wafer Shipments to Rebound 5.4% in 2025", "publisher": "SEMI", "published": "2025-10-28", "period": "2025-2028 forecast", "tier": "primary", "url": "https://www.semi.org/en/semi-press-release/semi-reports-global-silicon-wafer-shipments-to-rebound-5.4-percent-in-2025-with-new-record-expected-by-2028"},
+    {"id": "S4", "title": "Siltronic releases its guidance for FY2026", "publisher": "Siltronic", "published": "2026-02-12", "period": "FY2025 prelim / FY2026 guidance", "tier": "primary", "url": "https://www.siltronic.com/fileadmin/press/information/2026/20260212_Press_Release_Siltronic_releases_its_guidance_for_financial_year_2026.pdf"},
+    {"id": "S5", "title": "SUMCO sets dividend despite swing to quarterly loss", "publisher": "FilingReader", "published": "2026-05-12", "period": "2026 Q1", "tier": "secondary", "url": "https://filingreader.com/news-wire/tokyo/2026-05-12/sumco-sets-dividend-despite-swing-to-quarterly-loss"},
+    {"id": "S6", "title": "SUMCO Q2 2026 earnings summary", "publisher": "Quartr", "published": "2026-09-11", "period": "2026 Q2", "tier": "secondary", "url": "https://quartr.com/events/sumco-corporation-3436-q2-2026_F9MgaIQV"},
+    {"id": "S7", "title": "Shin-Etsu Chemical Q1 2027 earnings summary", "publisher": "Quartr", "published": "2026-07-24", "period": "2026 Apr-Jun", "tier": "secondary", "url": "https://quartr.com/events/shin-etsu-chemical-co-ltd-4063-q1-2027_ojdPgtrZ"},
+    {"id": "S8", "title": "GlobalWafers Q2 results", "publisher": "Taipei Times", "published": "2026-08-06", "period": "2026 Q2", "tier": "secondary", "url": "https://www.taipeitimes.com/News/biz/archives/2026/08/06/2003862000"},
+    {"id": "S9", "title": "Samsung, SK hynix evaluating Chinese wafers", "publisher": "Korea Herald", "published": "2026-05-12", "period": "2026-05", "tier": "secondary", "url": "https://www.koreaherald.com/article/10736248"},
+    {"id": "S10", "title": "NSIG 300mm revenue growth", "publisher": "DIGITIMES Asia", "published": "2026-04-17", "period": "2025", "tier": "secondary", "url": "https://apps.digitimes.com/news/a20260417VL209/nsig-300mm-revenue-wafer-growth.html"},
+    {"id": "S11", "title": "SK, SK실트론 보통주 전량 두산에 매각", "publisher": "뉴시스", "published": "2026-07-31", "period": "2026-07-31", "tier": "secondary", "url": "https://mobile.newsis.com/view/NISX20260731_0003732225"},
+    {"id": "S12", "title": "메모리 웨이퍼 '글로벌 톱2' 목표", "publisher": "아시아경제", "published": "2026-07-31", "period": "2026-07-31", "tier": "secondary", "url": "https://view.asiae.co.kr/article/2026073118535475957"},
+    {"id": "S13", "title": "SK실트론 매각 멈춘 SK그룹", "publisher": "머니투데이", "published": "2026-06-04", "period": "2026-06", "tier": "secondary", "url": "https://www.mt.co.kr/industry/2026/06/04/2026060322361518031"},
+    {"id": "S14", "title": "SK Siltron pulls plug on Bay County plant", "publisher": "Hoodline", "published": "2026-07-18", "period": "2026-07", "tier": "secondary", "url": "https://hoodline.com/2026/07/ev-bet-bust-sk-siltron-pulls-plug-on-bay-county-plant-140-jobs-on-the-line/"},
+    {"id": "S15", "title": "Narrowly targeted 25% Section 232 tariff on certain advanced semiconductors", "publisher": "White & Case", "published": "2026-01-21", "period": "2026-01-14 proclamation", "tier": "secondary", "url": "https://www.whitecase.com/insight-alert/president-trump-orders-narrowly-targeted-25-section-232-tariff-certain-advanced"},
+    {"id": "S16", "title": "Battle for 8-inch SiC heats up", "publisher": "Compound Semiconductor", "published": "2024-09-24", "period": "2024", "tier": "secondary", "url": "https://compoundsemiconductor.net/article/120181/_Battle_for_8-inch_SiC_heats_up"}
+  ]
+}
+</script>
+</main>
+</body>
+</html>
