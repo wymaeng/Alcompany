@@ -95,6 +95,9 @@
   .outs button.sel { background: var(--ink); color: #fff; border-color: var(--ink); }
   .doc { margin: 16px 28px 28px; padding: 20px; background: var(--soft); border-radius: 16px; overflow: auto; white-space: pre-wrap; font-size: 15px; line-height: 1.65; }
 
+  .doc.frame { padding: 0; background: #fff; border: 1px solid #e8e8ed; overflow: hidden; height: 70vh; }
+  .doc.frame iframe { border: 0; width: 100%; height: 100%; display: block; }
+
   footer { text-align: center; color: var(--faint); font-size: 12px; margin-top: 64px; }
 </style>
 </head>
@@ -146,12 +149,15 @@ const FALLBACK = {
   agents: {
     ceo:      { name: "AI CEO",    sub: "CLAUDE.md", role: "우리 회사의 경영 원칙", status: "active", outputs: [{ title: "경영 원칙 (CLAUDE.md)", path: "CLAUDE.md" }] },
     arumi:    { name: "CEO Agent", sub: "아르미", role: "원칙대로 업무를 나누고 조율하는 실행 담당", status: "vacant", outputs: [] },
-    research: { name: "Research",  sub: "조사팀", role: "자료를 찾아 사실을 모읍니다", status: "vacant", outputs: [] },
+    research: { name: "Research",  sub: "알렌", role: "시장 동향과 경쟁사 현황을 조사합니다", status: "active", outputs: [{ title: "최신 조사 보고서", latest: "research" }] },
     strategy: { name: "Strategy",  sub: "전략팀", role: "모은 사실로 방향을 제안합니다", status: "vacant", outputs: [] },
     critic:   { name: "Critic",    sub: "검토팀", role: "빈틈과 위험을 짚어냅니다", status: "vacant", outputs: [] },
     report:   { name: "Report",    sub: "보고팀", role: "대표가 읽을 보고서로 정리합니다", status: "vacant", outputs: [] }
   },
-  log: [{ time: "2026-10-21 15:19", from: "AI CEO", to: "대표", text: "경영 원칙을 세우고 자리에 앉았습니다. 첫 직원 채용을 기다리고 있어요." }]
+  log: [
+    { time: "2026-10-21 15:19", from: "AI CEO", to: "대표", text: "경영 원칙을 세우고 자리에 앉았습니다. 첫 직원 채용을 기다리고 있어요." },
+    { time: "2026-10-21 15:43", from: "알렌", to: "대표", text: "Research 부서에 들어왔습니다. 조사를 시작하면 무엇을 하고 있는지 여기에 한 줄씩 적을게요." }
+  ]
 };
 const DEPTS = ["research", "strategy", "critic", "report"];
 let state = FALLBACK, lastSig = "", shownLog = 0;
@@ -215,15 +221,24 @@ async function openCard(id) {
   if (outs.length) showOut(outs, 0); else $("pDoc").textContent = "아직 결과물이 없습니다.";
   $("sheet").classList.add("open");
 }
+// 결과물: { path: "파일" } 또는 { latest: "폴더" } (그 폴더의 가장 최근 파일)
 async function showOut(outs, i) {
   [...$("pOuts").children].forEach((b, j) => b.classList.toggle("sel", j === i));
-  $("pDoc").textContent = "불러오는 중…";
+  const o = outs[i], doc = $("pDoc");
+  const url = o.latest ? "__latest/" + o.latest : o.path;
+  doc.classList.remove("frame"); doc.textContent = "불러오는 중…";
   try {
-    const r = await fetch(outs[i].path + "?t=" + Date.now(), { cache: "no-store" });
+    const r = await fetch(url + "?t=" + Date.now(), { cache: "no-store" });
+    if (r.status === 404 && o.latest) { doc.textContent = `${o.latest} 폴더에 아직 결과물이 없습니다.`; return; }
     if (!r.ok) throw 0;
-    $("pDoc").textContent = await r.text();
+    if ((r.headers.get("content-type") || "").includes("text/html")) {
+      doc.classList.add("frame");
+      doc.innerHTML = `<iframe title="${esc(o.title)}" src="${esc(r.url)}"></iframe>`;
+    } else {
+      doc.textContent = await r.text();
+    }
   } catch (e) {
-    $("pDoc").textContent = `${outs[i].path} 파일은 PC에서 서버를 켜면 이 자리에 열립니다.`;
+    doc.textContent = `${o.latest ? o.latest + " 폴더의 최신 결과물" : o.path + " 파일"}은 PC에서 서버를 켜면 이 자리에 열립니다.`;
   }
 }
 document.addEventListener("click", e => { const c = e.target.closest(".card"); if (c) openCard(c.dataset.id); });

@@ -1,14 +1,15 @@
 {
   "company": "SK실트론",
   "agents": {
-    "ceo":      { "name": "AI CEO",    "sub": "CLAUDE.md", "role": "우리 회사의 경영 원칙", "status": "active", "outputs": [ { "title": "경영 원칙 (CLAUDE.md)", "path": "CLAUDE.md" } ] },
-    "arumi":    { "name": "CEO Agent", "sub": "아르미",    "role": "원칙대로 업무를 나누고 조율하는 실행 담당", "status": "vacant", "outputs": [] },
-    "research": { "name": "Research",  "sub": "조사팀",    "role": "자료를 찾아 사실을 모읍니다", "status": "vacant", "outputs": [] },
-    "strategy": { "name": "Strategy",  "sub": "전략팀",    "role": "모은 사실로 방향을 제안합니다", "status": "vacant", "outputs": [] },
-    "critic":   { "name": "Critic",    "sub": "검토팀",    "role": "빈틈과 위험을 짚어냅니다", "status": "vacant", "outputs": [] },
-    "report":   { "name": "Report",    "sub": "보고팀",    "role": "대표가 읽을 보고서로 정리합니다", "status": "vacant", "outputs": [] }
+    "ceo": {"name": "AI CEO", "sub": "CLAUDE.md", "role": "우리 회사의 경영 원칙", "status": "active", "outputs": [{"title": "경영 원칙 (CLAUDE.md)", "path": "CLAUDE.md"}]},
+    "arumi": {"name": "CEO Agent", "sub": "아르미", "role": "원칙대로 업무를 나누고 조율하는 실행 담당", "status": "vacant", "outputs": []},
+    "research": {"name": "Research", "sub": "알렌", "role": "시장 동향과 경쟁사 현황을 조사합니다", "status": "active", "outputs": [{"title": "최신 조사 보고서", "latest": "research"}]},
+    "strategy": {"name": "Strategy", "sub": "전략팀", "role": "모은 사실로 방향을 제안합니다", "status": "vacant", "outputs": []},
+    "critic": {"name": "Critic", "sub": "검토팀", "role": "빈틈과 위험을 짚어냅니다", "status": "vacant", "outputs": []},
+    "report": {"name": "Report", "sub": "보고팀", "role": "대표가 읽을 보고서로 정리합니다", "status": "vacant", "outputs": []}
   },
   "log": [
-    { "time": "2026-10-21 15:19", "from": "AI CEO", "to": "대표", "text": "경영 원칙을 세우고 자리에 앉았습니다. 첫 직원 채용을 기다리고 있어요." }
+    {"time": "2026-10-21 15:19", "from": "AI CEO", "to": "대표", "text": "경영 원칙을 세우고 자리에 앉았습니다. 첫 직원 채용을 기다리고 있어요."},
+    {"time": "2026-10-21 15:43", "from": "알렌", "to": "대표", "text": "Research 부서에 들어왔습니다. 조사를 시작하면 무엇을 하고 있는지 여기에 한 줄씩 적을게요."}
   ]
 }

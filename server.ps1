@@ -24,6 +24,20 @@ try {
     try {
       $rel = [Uri]::UnescapeDataString($ctx.Request.Url.AbsolutePath.TrimStart('/'))
       if ($rel -eq '') { $rel = 'index.html' }
+      # __latest/<폴더> : 그 폴더에서 가장 최근에 바뀐 파일로 이동
+      if ($rel -like '__latest/*') {
+        $dir = [IO.Path]::GetFullPath((Join-Path $root $rel.Substring(9)))
+        $newest = if ($dir.StartsWith($root) -and (Test-Path $dir -PathType Container)) {
+          Get-ChildItem $dir -File | Where-Object { $_.Name -notlike '.*' } | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+        }
+        if ($newest) {
+          $parts = $newest.FullName.Substring($root.Length + 1) -split '[\\/]'
+          $res.Redirect("/" + (($parts | ForEach-Object { [Uri]::EscapeDataString($_) }) -join '/'))
+        } else {
+          $res.StatusCode = 404
+        }
+        continue
+      }
       $path = [IO.Path]::GetFullPath((Join-Path $root $rel))
       if ($path.StartsWith($root) -and (Test-Path $path -PathType Leaf)) {
         $bytes = [IO.File]::ReadAllBytes($path)
